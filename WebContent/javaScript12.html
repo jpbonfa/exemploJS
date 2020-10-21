@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script 12</title>
+<script type="text/javascript" src="js/navegacao.js"></script>
+</head>
+<body>
+
+	<h2>O que o JavaScript pode fazer?</h2>
+
+	<p>JavaScript pode abrir uma nova janela</p>
+
+	<a href="http://localhost:8080/exemploJS/index.html"
+		onclick="novaJanela(this.href,'Index','820','560','yes');return false">clique
+		aqui</a>
+
+	<div align="center">
+		<br />
+		<button onclick="index()">Voltar</button>
+	</div>
+	
+	<script type="text/javascript">
+		function novaJanela(pagina, nome, w, h, scroll) {
+			LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+			TopPosition = (screen.height) ? (screen.heigth - h) / 2 : 0;
+			settings = 'location=no,toolbar=no,directories=no,status=no,heigth='
+					+ h
+					+ ',width='
+					+ w
+					+ ',top='
+					+ TopPosition
+					+ ',left='
+					+ LeftPosition + ',scrollbars =' + scroll + ',resizable';
+			win = window.open(pagina, nome, settings);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script 14</title>
+<script type="text/javascript" src="js/navegacao.js"></script>
+</head>
+<body>
+	<h2>O que o JavaScript pode fazer?</h2>
+
+	<p>JavaScript pode mudar o comportamento de um textField(input).</p>
+
+	<input type="text" value="usuario"
+		onblur="if(this.value == ''){ this.value = 'usuario';}"
+		onfocus="if(this.value == 'usuario'){ this.value='';}">
+
+	<input value="senha"
+		onblur="if(this.value == ''){ this.value = 'senha'; this.type='text';}"
+		onfocus="if(this.value == 'senha'){this.value=''; this.type='password'}">
+
+	<div align="center">
+		<br />
+		<button onclick="index()">Voltar</button>
+	</div>
+</body>
+</html>

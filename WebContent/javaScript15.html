@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script 15</title>
+<script type="text/javascript" src="js/navegacao.js"></script>
+</head>
+<body>
+	<h2>O que o JavaScript pode fazer?</h2>
+
+	<p>JavaScript pode controlar o tempo de uma ação.</p>
+
+
+	<a href="#" onclick="timeMsg()">Clique aqui e a mensagem aparecerá após 3 segundos!</a>
+
+	<div align="center">
+		<br />
+		<button onclick="index()">Voltar</button>
+	</div>
+	
+	<script type="text/javascript">
+		function timeMsg() {
+			var t = setTimeout('alertMsg()',3000);
+		}
+		
+		function alertMsg() {
+			document.write('Novo contexto na tela');
+		}
+	
+	
+	</script>
+</body>
+</html>

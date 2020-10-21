@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script 13</title>
+<script type="text/javascript" src="js/navegacao.js"></script>
+<script type="text/javascript">
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+
+		document.getElementById('relogio').innerHTML = h + ':' + m + ':' + s;
+
+		t = setTimeout('startTime()', 500);
+	}
+
+	function checkTime(time) {
+		if (time < 10) {
+			time = '0' + time;
+		}
+		return time;
+	}
+</script>
+</head>
+<body>
+	<h2>O que o JavaScript pode fazer?</h2>
+
+	<p>JavaScript pode criar um relogio.</p>
+
+	<div id="relogio">
+		<script type="text/javascript">
+			document.write(startTime())
+		</script>
+	</div>
+
+	<div align="center">
+		<br />
+		<button onclick="index()">Voltar</button>
+</body>
+</html>

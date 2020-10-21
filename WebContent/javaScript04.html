@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Script 04</title>
+<script type="text/javascript" src="js/navegacao.js"></script>
+</head>
+<body>
+	<h2>O que o JavaScript pode fazer?</h2>
+
+	<p>JavaScript implementar um evento em um botão.</p>
+
+	<button id="btn">Clique aqui</button>
+
+	<div align="center">
+		<br />
+		<button onclick="index()">Voltar</button>
+	</div>
+
+	<script type="text/javascript">
+		function exibirMensagem() {
+			var data = new Date();
+			alert(data.toString());
+		}
+
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', exibirMensagem);
+	</script>
+
+</body>
+</html>
